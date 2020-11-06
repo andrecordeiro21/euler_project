@@ -1,0 +1,15 @@
+primes = [2, 3]
+def prime(l):
+    c = 0
+    for k in range(3, int((l/2) + 0.5), 2):
+        if l % k == 0:
+            c += 1
+    return c == 0
+
+for k in range(5, 99999999, 2):
+    if prime(k):
+        primes.append(k)
+    if len(primes) == 10001:
+        break
+
+print(primes)
